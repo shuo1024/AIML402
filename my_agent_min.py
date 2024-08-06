@@ -98,7 +98,7 @@ class GameHandler:
                 if self.alpha >= self.beta:
                     break
             next_card = self.get_min_action()
-            next_score = self.compute_score(card, next_card)
+            next_score = self.compute_score(next_card,card)
             if next_score > return_score:
                 return_score = next_score
                 return_card = card
@@ -118,7 +118,7 @@ class GameHandler:
                 if self.alpha >= self.beta:
                     break
             next_card = self.get_max_action()
-            next_score = self.compute_score(card, next_card)
+            next_score = self.compute_score(next_card,card)
 
             if next_score < return_score:
                 return_score = next_score
